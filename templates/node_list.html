@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodes - Dash-ot</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/" class="logo">Dash-ot</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/nodes/add/">Add Node</a></li>
+                <li><a href="/nodes/">Node List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Nodes List</h2>
+            <ul>
+                {% for node in nodes %}
+                    <li>
+                        {{ node.name }} 
+                        <form action="{% url 'delete_node' node.id %}" method="post" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="delete-button">Delete</button>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dash-ot. All rights reserved.</p>
+    </footer>
+</body>
+</html>

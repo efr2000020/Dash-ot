@@ -3,16 +3,23 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    text-align: center;
 }
 header {
-    background: #333;
+    background: #333333;
     color: white;
-    padding: 15px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+    padding-left: 20px;
 }
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 nav ul li {
     display: inline;
@@ -22,13 +29,23 @@ nav ul li a {
     color: white;
     text-decoration: none;
 }
+.home-button {
+    background: #008cba;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 20px;
+}
 #hero {
     padding: 50px;
     background: #008cba;
     color: white;
+    text-align: center;
 }
-#features {
+#features, #contact {
     padding: 30px;
+    text-align: center;
 }
 #features ul {
     list-style-position: inside;
@@ -36,15 +53,44 @@ nav ul li a {
     display: inline-block;
     text-align: left;
 }
-#contact {
-    padding: 30px;
-    background: #ddd;
+/* Ensure the body takes the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+/* Main content should expand to push footer down */
+main {
+    flex: 1;
+}
+
+/* Footer styling to stay at the bottom */
 footer {
     background: #333;
     color: white;
     padding: 10px;
+    text-align: center;
+    width: 100%;
     position: relative;
     bottom: 0;
-    width: 100%;
+}
+
+.delete-button {
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-button:hover {
+    background: darkred;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
 }

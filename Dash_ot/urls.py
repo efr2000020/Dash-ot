@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import landing_page
+from core.views import node_list, add_node, delete_node
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("nodes/", node_list, name="node_list"),
+    path("nodes/add/", add_node, name="add_node"),
+    path("nodes/delete/<int:node_id>/", delete_node, name="delete_node"),
     path('', landing_page, name='landing'),
 ]
