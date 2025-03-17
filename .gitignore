@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+venv/
+
+# Compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets
+.env
+settings_local.py
+
+# Database (Optional)
+db.sqlite3
+
+# Logs
+*.log
+
+# OS & Editor-specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
